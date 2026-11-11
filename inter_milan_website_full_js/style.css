@@ -1,0 +1,31 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.bg-inter-black {
+    background-color: #000000 !important;
+}
+
+.text-inter-blue {
+    color: #010E80 !important;
+}
+
+.btn-inter {
+    background-color: #010E80;
+    color: white;
+    border: none;
+}
+
+.btn-inter:hover {
+    background-color: #0212a5;
+    color: white;
+}
+
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1518605368461-1ee7e530283e?q=80&w=2000&auto=format&fit=crop') center/cover;
+    height: 60vh;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
