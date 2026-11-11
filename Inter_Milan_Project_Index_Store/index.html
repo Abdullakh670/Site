@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inter Milan Fan Site</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">INTER MILAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="store.html">Official Store</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section & Timer -->
+    <header class="hero text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">FORZA INTER</h1>
+            <p class="lead">Welcome to the official fan page of the Nerazzurri.</p>
+            <div class="mt-5">
+                <h3 class="mb-3 text-warning">Next Derby In:</h3>
+                <div id="timer" class="d-flex justify-content-center gap-3 mt-3">
+                    <div class="time-box"><span id="days">00</span><p class="mb-0">Days</p></div>
+                    <div class="time-box"><span id="hours">00</span><p class="mb-0">Hours</p></div>
+                    <div class="time-box"><span id="mins">00</span><p class="mb-0">Minutes</p></div>
+                    <div class="time-box"><span id="secs">00</span><p class="mb-0">Seconds</p></div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Stats Section (JS Animation) -->
+    <section class="container py-5 text-center stats-section">
+        <h2 class="mb-5 fw-bold">Club Trophies</h2>
+        <div class="row mt-4">
+            <div class="col-md-4 mb-4">
+                <h1 class="stat-number text-primary display-3 fw-bold" data-target="20">0</h1>
+                <h5>Serie A Titles</h5>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h1 class="stat-number text-primary display-3 fw-bold" data-target="9">0</h1>
+                <h5>Coppa Italia</h5>
+            </div>
+            <div class="col-md-4 mb-4">
+                <h1 class="stat-number text-primary display-3 fw-bold" data-target="3">0</h1>
+                <h5>Champions League</h5>
+            </div>
+        </div>
+    </section>
+
+    <!-- Player Cards (CSS Hover Effect) -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-bold">First Team</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <div class="card player-card shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold">Lautaro Martinez</h5>
+                            <p class="card-text text-muted">Forward</p>
+                            <div class="hover-info text-center p-3">
+                                <p class="mb-0 fw-bold">Captain</p>
+                                <small>Top Scorer of the Season</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card player-card shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold">Nicolo Barella</h5>
+                            <p class="card-text text-muted">Midfielder</p>
+                            <div class="hover-info text-center p-3">
+                                <p class="mb-0 fw-bold">Midfield Engine</p>
+                                <small>Crucial Playmaker</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card player-card shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold">Alessandro Bastoni</h5>
+                            <p class="card-text text-muted">Defender</p>
+                            <div class="hover-info text-center p-3">
+                                <p class="mb-0 fw-bold">Solid Rock</p>
+                                <small>Heart of the defense</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card player-card shadow-sm h-100">
+                        <div class="card-body text-center p-4">
+                            <h5 class="card-title fw-bold">Yann Sommer</h5>
+                            <p class="card-text text-muted">Goalkeeper</p>
+                            <div class="hover-info text-center p-3">
+                                <p class="mb-0 fw-bold">Clean Sheet Master</p>
+                                <small>Reliable presence</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery and Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
