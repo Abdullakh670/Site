@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matches & Tickets - Inter Milan</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">INTER MILAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="matches.html">Matches & Tickets</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Schedule & Filters (JS) -->
+    <section class="container py-5">
+        <h2 class="text-center mb-5 fw-bold">Match Schedule</h2>
+        
+        <div class="d-flex justify-content-center gap-2 mb-4">
+            <button class="btn btn-primary filter-btn active" data-filter="all">All Matches</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="home">Home (San Siro)</button>
+            <button class="btn btn-outline-primary filter-btn" data-filter="away">Away</button>
+        </div>
+        
+        <div class="table-responsive">
+            <table class="table table-bordered table-hover text-center align-middle">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Date</th>
+                        <th>Competition</th>
+                        <th>Opponent</th>
+                        <th>Location</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="match-row home">
+                        <td>Nov 15, 2026</td>
+                        <td><span class="badge bg-primary">Serie A</span></td>
+                        <td class="fw-bold">AC Milan</td>
+                        <td>San Siro (Home)</td>
+                    </tr>
+                    <tr class="match-row away">
+                        <td>Nov 22, 2026</td>
+                        <td><span class="badge bg-secondary">Serie A</span></td>
+                        <td class="fw-bold">Juventus</td>
+                        <td>Allianz Stadium (Away)</td>
+                    </tr>
+                    <tr class="match-row home">
+                        <td>Dec 5, 2026</td>
+                        <td><span class="badge bg-warning text-dark">Champions League</span></td>
+                        <td class="fw-bold">Arsenal</td>
+                        <td>San Siro (Home)</td>
+                    </tr>
+                    <tr class="match-row away">
+                        <td>Dec 12, 2026</td>
+                        <td><span class="badge bg-primary">Serie A</span></td>
+                        <td class="fw-bold">AS Roma</td>
+                        <td>Stadio Olimpico (Away)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Ticket Form (JS Validation) -->
+    <section class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4 fw-bold">Order Tickets</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="ticketForm" class="p-4 border rounded bg-white shadow-sm">
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Select Match *</label>
+                            <select class="form-select" id="matchSelect">
+                                <option value="">- Choose a home match -</option>
+                                <option value="milan">vs AC Milan (Nov 15)</option>
+                                <option value="arsenal">vs Arsenal (Dec 5)</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a match.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Full Name *</label>
+                            <input type="text" id="name" class="form-control" placeholder="John Doe">
+                            <div class="invalid-feedback">Please enter your full name.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Email Address *</label>
+                            <input type="email" id="email" class="form-control" placeholder="name@example.com">
+                            <div class="invalid-feedback">Please enter a valid email format.</div>
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label fw-bold">Phone Number *</label>
+                            <input type="text" id="phone" class="form-control" placeholder="+7 777 123 4567">
+                            <div class="invalid-feedback">Required format: +7 777 123 4567</div>
+                        </div>
+                        <button type="submit" class="btn btn-warning w-100 fw-bold py-2 mt-3">Place Order</button>
+                        
+                        <!-- Success Message -->
+                        <div id="successMsg" class="alert alert-success mt-4 text-center fw-bold" style="display: none;">
+                            ✅ Tickets ordered successfully! Forza Inter!
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- jQuery and Custom JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
